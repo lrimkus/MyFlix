@@ -1,18 +1,13 @@
 MyMovies-DB
 ===========
 
-MyMovies DB
 	
-	If you have a media server at home, or perhaps just have movies on your PC HDD and figure you want to watch 
-	something.. How do you do it? Most probably you look at those titles, go to imdb.com look at ratings, 
-	descriptions and try to make your choice. Well, this is a perfect solution for you. This application scans 
-	your folders, and get all that info from imdb.com for you. It creates a nice interface and is designed to be 
-	used on pc as well as mobile devices.
+If you have a media server at home, or perhaps just have movies on your PC HDD and figure you want to watch something.. How do you do it? Most probably you look at those titles, go to imdb.com look at ratings, descriptions and try to make your choice. Well, this is a perfect solution for you. 
+This application scans  your folders, and get all that info from imdb.com for you. It creates a nice interface and is designed to be used on pc as well as mobile devices.
 
-	Initially this was a one-night project done in a dirty code. 
-	However, decided to release it to Github, so it took another night to recode it to OOP PHP. 
+Initially this was a one-night project done in a dirty code.  However, decided to release it to Github, so it took another night to recode it to OOP PHP. 
 
-	Please read IMDB.com terms and conditions on how you can use the data from them.
+Please read IMDB.com terms and conditions on how you can use the data from them.
 
 Features
 <ul>
