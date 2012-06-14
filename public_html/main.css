@@ -1,0 +1,101 @@
+body { 
+	color:white; 
+	background-color:black; 
+	color: #dddddd;
+	font: 15px "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+}
+
+#main {
+	
+}
+
+
+
+#menu, #content {
+	padding: 10px 0px;
+	margin: 10px auto 20px;
+	width: 705px;
+}
+
+#menu {background-color: #333333;}
+
+#menu li { 
+	color: #cccccc; 
+	display: inline;
+	margin-right: 25px; 
+	font-weight:bold; 
+	line-height:7px;
+}
+
+#menu ul {
+	margin: 0px 20px;
+	padding-left: 0px;
+}
+
+#menu a, a.visited  { 
+	color: #666666;
+}
+
+#menu a.active {
+	color: red;
+}
+
+#menu a:hover {
+	color: #6474A1;
+}
+
+#menu li.actn a { 
+	color: white; 
+}
+
+.movie {
+	margin-bottom: 20px;
+	background-color:#111111;
+	padding: 20px;
+	overflow: hidden;
+}
+
+.movie .poster { 
+	margin-right:30px;
+	width: 185px;
+	float:left;
+}
+
+.movie_info { 
+	overflow: hidden;
+	width: 450px;
+}
+
+.movie_info ul { padding:0px; }
+
+.smallnote { 
+	font-size: 11px; 
+}
+
+.label {
+	font-weight: bold;
+}
+
+li { 
+	list-style-type: none; 
+	margin-top: 5px;
+}
+
+h1 { 
+	margin-top:0px;
+}
+ul {
+	margin-top:0px;
+}
+
+a, a.visited, a.active {
+	color: #6474A1;
+	text-decoration: none;
+}
+
+
+.toplink { 
+	float:right; 
+	position:relative; 
+	top:-1px;
+}
