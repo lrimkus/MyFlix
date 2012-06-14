@@ -24,7 +24,7 @@ class main_controller
 		
 		//So What folder are we talking about??
 		$folder_names = array_values($this->all_folders);
-		$this->folder = $folder_names[$_GET['id'] - 1];
+		$this->folder = $folder_names[$this->page_id- 1];
 		
 		$this->prepare_model();
 		$this->show_page();

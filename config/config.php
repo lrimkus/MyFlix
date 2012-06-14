@@ -12,10 +12,12 @@ error_reporting(0);
 	$db_info['dbpss'] =  '';
 	$db_info['db_name'] = '';
 	
-	//the folders for movies. All the movies must contain imdb id in curly brackets like Avatar.2009.{tt0499549}.mkv
+	//the folders for movies. All the movies must contain imdb id in curly brackets like Avatar.2009.{tt0499549}.mkv  or a folder Avatar.2009.{tt0499549}/ 
+	
 	$folders['useen'] = 'HD_NOT_SEEN';
-	$folders['collection'] = 'COLLECTION';
-	$folders['seen'] = 'HD_SEEN';
+	
+	//$folders['collection'] = 'COLLECTION';
+	//$folders['seen'] = 'HD_SEEN';
 	
 	//if is_live is true, every time the page loads, it pulls all the info from imdb. 
 	//It takes a while, this is why it is disdabled by default
