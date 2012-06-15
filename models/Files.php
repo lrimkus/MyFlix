@@ -12,7 +12,7 @@ class Files {
 		
 		try {
 				
-			if (($files = scandir(MOVIES_PATH . $dir)) == FALSE) { throw new Exception ("Error: System cannot find folder" . $dir); }	
+			if (($files = scandir(MOVIES_PATH . $dir)) == FALSE) { throw new Exception ("Error: System cannot find folder " . $dir); }	
 			
 			$this->directory = MOVIES_PATH . $dir;
 			$this->files = $files;

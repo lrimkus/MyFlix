@@ -2,8 +2,6 @@
 
 //IMDB Parser
 
-
-
 class ImdbParser implements MovieData {
 	
 	private $imdb_id;
@@ -78,8 +76,8 @@ class ImdbParser implements MovieData {
 	public function get_year() { 
 		 
 		$ss = $this->parse_item('itemprop="name"', '</h1', $this->imdb_html);
-		$data['Year'] = $this->parse_item('(', ')', $ss);
-		if (strstr($data['Year'], '<a ')) { $data['Year'] = $this->parse_item('>', '<', $data['Year']); }
+		$data['Year'] = $this->parse_item('(<', ')', $ss);
+		if (strstr($data['Year'], 'a ')) { $data['Year'] = $this->parse_item('>', '<', $data['Year']); }
 		
 		return $data['Year'];
 	

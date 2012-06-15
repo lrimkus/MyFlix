@@ -15,7 +15,7 @@ Features
 	<li>Navigation between movie directories (i.e. you can categorize them as "seen", "favorites", "not seen"</li>
 	<li>Uses HTML5, so is suited for mobile devices.</li>
 	<li>You can use it from your computer too.</li>
-	<li>When saved on dashboard in iOS works as a native app (no Safari chrome, no tabs).</li>
+	<li>When saved on home screen in iOS devices it looks like a native app (no Safari chrome, no tabs).</li>
 	<li>Has an icon and splash screen for iOS.</li>
 </ul>	
 Requirements

@@ -16,6 +16,11 @@
 
  class JsonAPI extends ImdbParser {
 		
+	public function __construct($id) { //takes one argument -ID
+			
+		parent::__construct($id);
+	}
+		
 	public function get_json() {
 		
 		$data = array (

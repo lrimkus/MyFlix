@@ -37,7 +37,7 @@ class main_controller
 		$movie_ids = $movies->get_movie_ids();
 		
 		
-		if ($this->live === TRUE) { // if we want to use database
+		if ($this->live === TRUE) { // if we DONT want to use database
 		
 			foreach($movie_ids as $movie_id) {  $this->movie_obj[] = new ImdbParser($movie_id);  }	
 		} 
