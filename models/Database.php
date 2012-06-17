@@ -24,10 +24,8 @@ class Database {
 		
 		$idz = "'".implode("','", $ids)."'"; //so we query for only the ones we need for the page
 			
-		$sth = $this->db->prepare("SELECT * FROM movies where ID IN (".$idz.") order by title");
-		
-		$sth->execute();
-		
+		$sth = $this->db->query("SELECT * FROM movies where ID IN (".$idz.") order by title");
+				
 		$result = $sth->fetchAll();
 		
 		foreach ($result as $v) { $this->raw_movies[$v['ID']] = $v; } //we need imdbIDs as keys of the array
@@ -50,25 +48,15 @@ class Database {
 				 $json = $movie_json->get_json();
 				 $data = json_decode($json, TRUE);
 				 
+				 $fields = array('ID', 'Title', 'Year', 'Director', 'Released','Rating','Votes','Genre','Rated','Runtime','Actors','Plot','Poster');
+				 
 				 //insert into DB
-				$query = "INSERT INTO movies (ID, Title, Year, Director, Released, Rating, Votes, Genre, Rated, Runtime, Actors, Plot, Poster) 
-				VALUES (
-					".$this->db->quote($data['ID']).", 
-					".$this->db->quote($data['Title']).", 
-					".$this->db->quote($data['Year']).", 
-					".$this->db->quote($data['Director']).",
-					".$this->db->quote($data['Released']).", 
-					".$this->db->quote($data['Rating']).", 
-				 	".$this->db->quote($data['Votes']).", 
-					".$this->db->quote($data['Genre']).", 
-					".$this->db->quote($data['Rated']).", 
-					".$this->db->quote($data['Runtime']).", 
-					".$this->db->quote($data['Actors']).", 
-					".$this->db->quote($data['Plot']).", 
-					".$this->db->quote($data['Poster'])."
-				)";
+				$query = "INSERT INTO movies (". implode(",", $fields) .")  VALUES (:". implode(",:", $fields) .") ";
 				
 				$sth = $this->db->prepare($query);
+				
+				foreach ($fields as $v) { $sth->bindParam(":$v", $data[$v]);  }
+				
 				$sth->execute();
 				
 				$this->raw_movies[$id] = $data; //we add to all the processed movies within the object
