@@ -1,4 +1,5 @@
-MyMovies-DB
+
+<h1>MyMovies-DB</h1>
 ===========
 
 	
@@ -9,7 +10,7 @@ Initially this was a one-night project done in a dirty code.  However, decided t
 
 Please read IMDB.com terms and conditions on how you can use the data from them.
 
-Features
+<h2>Features</h2>
 <ul>
 	<li>Makes a nice page out of your movies directory, so you can pick a movie sitting on your couch using your iPad.</li>
 	<li>Navigation between movie directories (i.e. you can categorize them as "seen", "favorites", "not seen"</li>
@@ -18,13 +19,13 @@ Features
 	<li>When saved on home screen in iOS devices it looks like a native app (no Safari chrome, no tabs).</li>
 	<li>Has an icon and splash screen for iOS.</li>
 </ul>	
-Requirements
+<h2>Requirements</h2>
 <ul>
  	<li>Web server</li>
  	<li>PHP > 5</li>
  	<li>MySQL (currently, there is place for other DB plug-ins)</li>
 </ul> 
- To Do
+<h2>To Do</h2>
  <ul>
  	<li>Initialization script that creates a DB and chmods a posters folder</li>
  	<li>Write an extension for SQLite and PgSQL</li>
@@ -36,3 +37,5 @@ Requirements
 	<li>A button that refreshes data about a movie from IMDB on demand.</li>
 	<li>Search quickly made with javascript</li>
 </ul>
+<h2>Screenshot</h2>
+<img src="https://github.com/lrimkus/MyMovies-DB/raw/master/screenshot.png" alt="Screenshot" width="400" />
