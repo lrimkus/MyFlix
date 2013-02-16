@@ -27,7 +27,6 @@ Please read IMDB.com terms and conditions on how you can use the data from them.
  <ul>
  	<li>Initialization script that creates a DB and chmods a posters folder</li>
  	<li>Write an extension for SQLite and PgSQL</li>
-	<li>favicon.ico</li>
 	<li>Paging</li>
 	<li>Sorting</li>
 	<li>Search quickly made with javascript</li>
