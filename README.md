@@ -34,4 +34,4 @@ Please read IMDB.com terms and conditions on how you can use the data from them.
   <li>Trailers from Youtube!</li>
 </ul>
 <h2>Screenshot</h2>
-<img src="https://github.com/lrimkus/MyMovies-DB/raw/master/screenshot.png" alt="Screenshot" width="400" />
+<img src="https://github.com/lrimkus/MyFlix/raw/master/screenshot.png" alt="Screenshot" width="400" />

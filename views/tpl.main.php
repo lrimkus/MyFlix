@@ -19,7 +19,6 @@ $folders = $this->getConfig()->getFolders();
     <link rel="apple-touch-startup-image" media="(device-width: 768px)  and (orientation: landscape)  and (-webkit-device-pixel-ratio: 2)" href="images/design/startup_horizontal_1496x2048.png"/>
     <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="/images/design/startup_vertical_640x920.png"/>
     <!--  End iOS tags -->
-
 </head>
 <body>
 <div id="main">
