@@ -1,22 +1,25 @@
 <?
 /** @var $this MyMoviesController */
-
 $folders = $this->getConfig()->getFolders();
 
 ?><!DOCTYPE html>
 <html>
 <head>
-    <title>MyMovies Database</title>
+    <title>MyFlicks</title>
     <link type="text/css" href="main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <!-- Begin iOS tags -->
     <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="viewport" content="user-scalable=no, width=device-width"/>
-    <link rel="apple-touch-icon" href="/images/design/apple-touch-icon.png"/>
-    <link rel="apple-touch-startup-image" media="(device-width: 768px)  and (orientation: portrait)  and (-webkit-device-pixel-ratio: 2)" href="images/design/apple-touch-startup-image-1536x2008.png"/>
-    <link rel="apple-touch-startup-image" media="(device-width: 768px)  and (orientation: landscape)  and (-webkit-device-pixel-ratio: 2)" href="images/design/apple-touch-startup-image-1496x2048.png"/>
-    <link href="/images/design/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
+    <link rel="apple-touch-icon-precomposed" href="/images/design/apple-touch-icon.png"/>
+    <link rel="apple-touch-startup-image" media="(device-width: 768px)  and (orientation: portrait)  and (-webkit-device-pixel-ratio: 2)" href="images/design/startup_vertical_1536x2008.png"/>
+    <link rel="apple-touch-startup-image" media="(device-width: 768px)  and (orientation: landscape)  and (-webkit-device-pixel-ratio: 2)" href="images/design/startup_horizontal_1496x2048.png"/>
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="/images/design/startup_vertical_640x920.png"/>
+    <!--  End iOS tags -->
+
 </head>
 <body>
 <div id="main">
@@ -42,6 +45,6 @@ $folders = $this->getConfig()->getFolders();
         </div>
     </div>
 </div>
-<img src="/images/design/ajax_loader.gif" style="display:none"/>
+<img src="/images/design/ajax_loader.gif" style="display:none" alt="Pre-loading ajax refresh icon."/>
 </body>
 </html>

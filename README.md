@@ -1,5 +1,5 @@
 
-<h1>MyMovies-DB</h1>
+<h1>MyFlix</h1>
 ===========
 
 	
@@ -31,6 +31,7 @@ Please read IMDB.com terms and conditions on how you can use the data from them.
 	<li>Paging</li>
 	<li>Sorting</li>
 	<li>Search quickly made with javascript</li>
+  <li>Trailers from Youtube!</li>
 </ul>
 <h2>Screenshot</h2>
 <img src="https://github.com/lrimkus/MyMovies-DB/raw/master/screenshot.png" alt="Screenshot" width="400" />

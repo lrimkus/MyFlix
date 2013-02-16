@@ -1,17 +1,18 @@
 body {
   background-color: black;
   color: #dddddd;
-  font: 15px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  font: 14px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 }
 
 #menu, #content {
   padding: 10px 0;
   margin: 10px auto 20px;
   width: 705px;
+  border-radius: 5px;
 }
 
 #menu {
-  background-color: #333333;
+  font-size: 17px;
 }
 
 #menu li {
@@ -19,11 +20,11 @@ body {
   display: inline;
   margin-right: 25px;
   font-weight: bold;
-  line-height: 7px;
+  line-height: 8px;
 }
 
 #menu ul {
-  margin: 0 20px;
+  margin: 0;
   padding-left: 0;
 }
 
@@ -48,6 +49,7 @@ body {
   background-color: #111111;
   padding: 20px;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .movie .poster {
@@ -59,6 +61,7 @@ body {
 .movie_info {
   overflow: hidden;
   width: 450px;
+  line-height: 20px;;
 }
 
 .movie_info ul {
