@@ -1,19 +1,19 @@
 <?
 require_once '../models/ImdbParsedMovies.php';
 require_once '../models/Movie.php';
-require_once '../models/DiskUtility.php';
+require_once '../models/DiskLayer.php';
 
 abstract class MyMoviesController
 {
   protected $movies;
   protected $currentFolder;
   protected $config;
-  protected $diskUtility;
+  protected $diskLayer;
 
   public function __construct(Configuration $config)
   {
     $this->config = $config;
-    $this->diskUtility = new DiskUtility($config);
+    $this->diskLayer = new DiskLayer($config);
     $this->folders = $this->config->getFolders();
 
     $this->renderPage();

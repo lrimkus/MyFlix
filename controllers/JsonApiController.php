@@ -1,6 +1,5 @@
 <?
-require_once '../models/Utilities.php';
-require_once '../models/MovieAPI.php';
+require_once '../helpers/Utilities.php';
 require_once 'MyMoviesController.php';
 
 class JsonApiController extends MyMoviesController
@@ -22,11 +21,32 @@ class JsonApiController extends MyMoviesController
 
   protected function renderPage()
   {
+    $movieData = $this->prepareMovies();
+    print  json_encode($movieData);
+  }
+
+  private function prepareMovies()
+  {
     $movieFromImdb = new ImdbParsedMovies(array($this->imdbId));
     $this->movies = $movieFromImdb->getMovies();
-    $api = new MovieAPI($this->movies[$this->imdbId]);
+    $movie = $this->movies[$this->imdbId];
 
-    print $api->getMovieJSON();
+    $data = array(
+      'ID' => $movie->getMovieId(),
+      'Title' => $movie->getTitle(),
+      'Director' => $movie->getDirector(),
+      'Actors' => $movie->getActors(),
+      'Genre' => $movie->getGenre(),
+      'Runtime' => $movie->getRunTime(),
+      'Plot' => $movie->getPlot(),
+      'Poster' => $movie->getPosterURL(),
+      'Rating' => $movie->getRating(),
+      'Votes' => $movie->getVotes(),
+      'Year' => $movie->getReleaseYear(),
+      'Awards' => $movie->getAwards()
+    );
+
+    return $data;
   }
 
 }

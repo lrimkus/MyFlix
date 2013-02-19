@@ -1,6 +1,6 @@
 <?
 
-class DiskUtility
+class DiskLayer
 {
   private $currentFolder;
   private $movieIds;
@@ -113,4 +113,4 @@ class DiskUtility
   }
 
 }
-//end of DiskUtility.php
+//end of DiskLayer.php

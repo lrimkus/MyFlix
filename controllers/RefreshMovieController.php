@@ -1,6 +1,6 @@
 <?
 require_once 'MyMoviesController.php';
-require_once '../models/Utilities.php';
+require_once '../helpers/Utilities.php';
 
 class RefreshMovieController extends MyMoviesController
 {
@@ -34,8 +34,8 @@ class RefreshMovieController extends MyMoviesController
     $this->movies = $movieFromImdb->getMovies();
     $this->dbLayer->updateMovie($this->movies[$this->imdbId]);
 
-    $this->diskUtility->deletePosters($this->movies);
-    $this->diskUtility->savePosters($this->movies);
+    $this->diskLayer->deletePosters($this->movies);
+    $this->diskLayer->savePosters($this->movies);
   }
 
 }

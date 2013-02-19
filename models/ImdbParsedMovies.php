@@ -1,7 +1,7 @@
 <?
 
 require_once '../models/Movie.php';
-require_once '../models/Utilities.php';
+require_once '../helpers/Utilities.php';
 
 class ImdbParsedMovies
 {

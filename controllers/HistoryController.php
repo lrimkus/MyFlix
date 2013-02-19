@@ -22,7 +22,7 @@ class HistoryController extends MyMoviesController
   {
     $moviesInHistory = array();
 
-    $idsOnDisk = $this->diskUtility->getAllMoviesIdsOnDisk();
+    $idsOnDisk = $this->diskLayer->getAllMoviesIdsOnDisk();
     $moviesFromDB = $this->config->getDbLayer()->getAllMovies();
 
     foreach ($moviesFromDB as $id => $movie) {
@@ -32,7 +32,7 @@ class HistoryController extends MyMoviesController
     }
 
     $this->movies = $moviesInHistory;
-    $this->diskUtility->savePosters($moviesInHistory);
+    $this->diskLayer->savePosters($moviesInHistory);
   }
 }
 

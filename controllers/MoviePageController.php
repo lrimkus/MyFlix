@@ -21,21 +21,21 @@ class MoviePageController extends MyMoviesController
 
   private function prepareMovies()
   {
-    $this->diskUtility->setCurrentFolder($this->currentFolder);
-    $movieIds = $this->diskUtility->getMovieIds();
+    $this->diskLayer->setCurrentFolder($this->currentFolder);
+    $movieIds = $this->diskLayer->getMovieIds();
 
     if ($this->config->getUseCache()) {
       $cachedMovies = new DbCachedMovies($this->config, $movieIds);
       $this->movies = $cachedMovies->getMovies();
 
       if ($cachedMovies->getNewMoviesAdded()) {
-        $this->diskUtility->savePosters($this->movies);
+        $this->diskLayer->savePosters($this->movies);
       }
     }
     else {
       $movieFromImdb = new ImdbParsedMovies($movieIds);
       $this->movies = $movieFromImdb->getMovies();
-      $this->diskUtility->savePosters($this->movies);
+      $this->diskLayer->savePosters($this->movies);
     }
   }
 
