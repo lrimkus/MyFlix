@@ -130,7 +130,7 @@ class ImdbParsedMovies
 
   private function getYear()
   {
-    if ($partialHTML = $this->extractPartialHTML('<h1 class="header" itemprop="name">', '</h1>')) {
+    if ($partialHTML = $this->extractPartialHTML('<h1 class="header">', '</h1>')) {
       $result = strip_tags($this->extractPartialHTML('<span class="nobr">(', ')', $partialHTML));
     }
     return isset($result) ? $result : null;
