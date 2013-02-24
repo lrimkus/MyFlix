@@ -79,12 +79,12 @@ class ImdbParsedMovies
 
   private function getItemsUnderH4($headerName, $stopCharacter)
   {
-    $directorsHtml = $this->extractPartialHTML('<h4 class="inline">' . $headerName, $stopCharacter);
-    if (!$directorsHtml) {
+    $itemsHtml = $this->extractPartialHTML('<h4 class="inline">' . $headerName, $stopCharacter);
+    if (!$itemsHtml) {
       return null;
     }
-    $directorsText = strip_tags($directorsHtml);
-    $result = str_replace(array("\n", "  ", 's:', ':'), "", trim($directorsText, ":\n\t "));
+    $itemsText = strip_tags($itemsHtml);
+    $result = str_replace(array("\n", "  ", 's:', ':'), "", trim($itemsText, ":\n\t "));
     return $result;
   }
 
