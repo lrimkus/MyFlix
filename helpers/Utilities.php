@@ -15,11 +15,13 @@ class Utilities
 
   public static function getFileData($url)
   {
+    $headers[] = "Accept-Language: en-us,en;q=0.5";
     $cURLOptions = array(
       CURLOPT_URL => $url,
       CURLOPT_HEADER => false,
       CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_USERAGENT => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17'
+      CURLOPT_USERAGENT => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17',
+      CURLOPT_HTTPHEADER => $headers
     );
 
     $cURL = curl_init();
