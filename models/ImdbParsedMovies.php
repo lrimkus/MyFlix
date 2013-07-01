@@ -146,7 +146,7 @@ class ImdbParsedMovies
 
   private function getAwards()
   {
-    $partialHTML = $this->extractPartialHTML('<div class="article highlighted" id="titleAwardsRanks">', '</div>');
+    $partialHTML = $this->extractPartialHTML('<span itemprop="awards"><b>', '<script>');
     if (!$partialHTML) {
       return null;
     }
