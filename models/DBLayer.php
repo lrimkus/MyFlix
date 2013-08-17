@@ -37,7 +37,7 @@ Class DBLayer
 
   public function getAllMovies()
   {
-    $query = "SELECT * FROM movies  order by title";
+    $query = "SELECT * FROM movies  order by added desc";
     $sql = $this->dBInstance->prepare($query);
     $sql->execute();
 
@@ -48,7 +48,6 @@ Class DBLayer
 
   public function insertMovie(Movie $movie)
   {
-
     $query = "INSERT INTO movies
               (
                 id
