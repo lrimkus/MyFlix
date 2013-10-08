@@ -25,7 +25,7 @@ class RefreshMovieController extends MyMoviesController
   protected function renderPage()
   {
     $this->prepareMovies();
-    require_once '../views/tpl.movieBox.php';
+    include '../views/tpl.movieBox.php';
   }
 
   private function prepareMovies()
