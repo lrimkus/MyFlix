@@ -135,7 +135,7 @@ class ImdbParsedMovies
 
   private function getPosterUrl()
   {
-    if ($partialHTML = $this->extractPartialHTML('<div class="image">', '</div>')) {
+    if ($partialHTML = $this->extractPartialHTML('<div class="poster">', '</div>')) {
       $imageUrl = $this->extractPartialHTML('src="', '"', $partialHTML);
     }
     return isset($imageUrl) ? $imageUrl : null;
