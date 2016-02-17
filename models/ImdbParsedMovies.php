@@ -90,7 +90,7 @@ class ImdbParsedMovies
 
   private function getTitle()
   {
-    return $this->extractPartialHTML('itemprop="name">', '<');
+    return $this->extractPartialHTML('og:title\' content="', ' (');
   }
 
   private function getDirectors()
@@ -130,10 +130,7 @@ class ImdbParsedMovies
 
   private function getYear()
   {
-    if ($partialHTML = $this->extractPartialHTML('<h1 class="header">', '</h1>')) {
-      $result = strip_tags($this->extractPartialHTML('<span class="nobr">(', ')', $partialHTML));
-    }
-    return isset($result) ? $result : null;
+    return $this->extractPartialHTML('<a href="/year/','/');
   }
 
   private function getPosterUrl()
