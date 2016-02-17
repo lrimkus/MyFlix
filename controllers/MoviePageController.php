@@ -16,7 +16,7 @@ class MoviePageController extends MyMoviesController
 
     $this->currentFolder = $folderNames[$this->pageId - 1];
     $this->prepareMovies();
-    require_once '../views/tpl.main.php';
+    include '../views/tpl.main.php';
   }
 
   private function prepareMovies()
